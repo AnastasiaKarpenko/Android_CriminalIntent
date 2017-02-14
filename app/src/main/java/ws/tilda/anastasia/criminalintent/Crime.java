@@ -1,6 +1,9 @@
 package ws.tilda.anastasia.criminalintent;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.UUID;
 
 public class Crime {
@@ -28,6 +31,12 @@ public class Crime {
 
     public Date getDate() {
         return mDate;
+    }
+
+    public String getFormattedDate() {
+        SimpleDateFormat formatter = new SimpleDateFormat("EEEE, MMM d, yyyy", Locale.US);
+        String formattedDate = formatter.format(getDate());
+        return formattedDate;
     }
 
     public void setDate(Date date) {
