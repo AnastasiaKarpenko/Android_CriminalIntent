@@ -77,11 +77,4 @@ public class DatePickerFragment extends DialogFragment {
                 .onActivityResult(getTargetRequestCode(),resultCode, intent);
     }
 
-
-
-
-
-
-
-
 }
