@@ -16,8 +16,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import static android.os.Build.VERSION_CODES.M;
-
 
 public class DatePickerFragment extends DialogFragment {
     public static final String ARG_DATE = "date";
