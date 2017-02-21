@@ -19,11 +19,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import java.util.Date;
 import java.util.UUID;
 
-import static android.R.attr.data;
 import static android.widget.CompoundButton.OnCheckedChangeListener;
 import static android.widget.CompoundButton.OnClickListener;
 
@@ -36,6 +37,8 @@ public class CrimeFragment extends Fragment {
 
     private Button mSuspectButton;
     private Button mReportButton;
+    private ImageButton mPhotoButton;
+    private ImageView mPhotoView;
     private Crime mCrime;
     private EditText mTitleField;
     private Button mDateButton;
@@ -144,6 +147,9 @@ public class CrimeFragment extends Fragment {
         if(packageManager.resolveActivity(pickContact, PackageManager.MATCH_DEFAULT_ONLY) == null) {
             mSuspectButton.setEnabled(false);
         }
+
+        mPhotoButton = (ImageButton) v.findViewById(R.id.crime_camera);
+        mPhotoView = (ImageView) v.findViewById(R.id.crime_photo);
 
         return v;
     }
