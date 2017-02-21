@@ -2,6 +2,7 @@ package ws.tilda.anastasia.criminalintent;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import android.widget.EditText;
 import java.util.Date;
 import java.util.UUID;
 
+import static android.R.attr.data;
 import static android.widget.CompoundButton.OnCheckedChangeListener;
 import static android.widget.CompoundButton.OnClickListener;
 
@@ -124,7 +126,8 @@ public class CrimeFragment extends Fragment {
         });
 
         //will be used a couple of times, that's why put outside mSuspectButton OnClickListener
-        final Intent pickContact = new Intent (Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+        final Intent pickContact = new Intent (Intent.ACTION_PICK,
+                ContactsContract.Contacts.CONTENT_URI);
         mSuspectButton = (Button) v.findViewById(R.id.crime_suspect);
         mSuspectButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -135,6 +138,11 @@ public class CrimeFragment extends Fragment {
 
         if (mCrime.getSuspect() != null) {
             mSuspectButton.setText(mCrime.getSuspect());
+        }
+
+        PackageManager packageManager = getActivity().getPackageManager();
+        if(packageManager.resolveActivity(pickContact, PackageManager.MATCH_DEFAULT_ONLY) == null) {
+            mSuspectButton.setEnabled(false);
         }
 
         return v;
