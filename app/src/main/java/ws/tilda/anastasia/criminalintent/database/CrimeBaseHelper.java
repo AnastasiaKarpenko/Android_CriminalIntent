@@ -27,7 +27,6 @@ public class CrimeBaseHelper extends SQLiteOpenHelper {
                 CrimeTable.Cols.SUSPECT +
                 ")"
         );
-
     }
 
     @Override
