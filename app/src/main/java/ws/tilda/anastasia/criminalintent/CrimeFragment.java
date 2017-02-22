@@ -18,6 +18,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -26,6 +29,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.util.Date;
@@ -83,6 +87,7 @@ public class CrimeFragment extends Fragment {
         UUID crimeId = (UUID) getArguments().getSerializable(ARG_CRIME_ID);
         mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
         mPhotoFile = CrimeLab.get(getActivity()).getPhotoFile(mCrime);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -259,6 +264,31 @@ public class CrimeFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.fragment_crime, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.delete_crime_action :
+                UUID crimeId = mCrime.getId();
+                CrimeLab.get(getActivity()).deleteCrime(crimeId);
+
+                Toast.makeText(getActivity(), "Crime deleted", Toast.LENGTH_SHORT).show();
+
+                getActivity().finish();
+
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
+
     private void updateCrime() {
         CrimeLab.get(getActivity()).updateCrime(mCrime);
         mCallbacks.onCrimeUpdated(mCrime);
@@ -302,6 +332,8 @@ public class CrimeFragment extends Fragment {
             mPhotoView.setContentDescription(getString(R.string.crime_photo_image_description));
         }
     }
+
+
 
 
 
