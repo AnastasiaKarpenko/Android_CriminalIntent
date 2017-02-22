@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.UUID;
 
 
-public class CrimePagerActivity extends AppCompatActivity {
+public class CrimePagerActivity extends AppCompatActivity implements CrimeFragment.Callbacks {
 
     public static final String EXTRA_CRIME_ID =
             "ws.tilda.anastasia.criminalintent.crime+id";
@@ -57,5 +57,10 @@ public class CrimePagerActivity extends AppCompatActivity {
                 break;
             }
         }
+    }
+
+    @Override
+    public void onCrimeUpdated(Crime crime) {
+        //empty implementation
     }
 }
