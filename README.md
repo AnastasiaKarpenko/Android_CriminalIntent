@@ -19,4 +19,9 @@ Android dev topics that were learnt in this project:
 - Localization
 - Making app accessible (for TalkBack screen reader)
 
+Screenshots of the app:
+
+For Phone
+![alt tag] (https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_phoneEN.png)
+
 
