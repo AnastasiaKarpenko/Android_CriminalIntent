@@ -24,8 +24,8 @@ Screenshots of the app:
 For Phone
 ![alt tag] (https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_phoneEN.png)
 
-Localized (Spanish)
-![alt tag] (https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_phoneES.png)
+Localized in Spanish 
+![alt tag] (https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_ES.png)
 
 For Tablet
 ![alt tag] (https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_tabletEN.png)
