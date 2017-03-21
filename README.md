@@ -22,12 +22,12 @@ Android dev topics that were learnt in this project:
 Screenshots of the app:
 
 For Phone
-![alt tag] (https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_phoneEN.png)
+![alt tag](https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_phoneEN.png)
 
 Localized in Spanish 
-![alt tag] (https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_ES.png)
+![alt tag](https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_ES.png)
 
 For Tablet
-![alt tag] (https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_tabletEN.png)
+![alt tag](https://github.com/AnastasiaKarpenko/Android_CriminalIntent/blob/master/CriminalIntent_screenshot_tabletEN.png)
 
 
